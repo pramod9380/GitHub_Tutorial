@@ -23,10 +23,6 @@ public class EmployeeService {
         return "added employee";
     }
 
-    public List<Employee> getEmployees(){
-        return list;
-    }
-
     public String deleteEmployee(){
         return "Employee deleted";
     }

@@ -4,11 +4,11 @@ public class Employee {
 
     private String employeeName;
     private int id;
-    private String employeeAddress;
 
-    private double salary;
+    private String address;
 
-    public Employee(String employeeName, int id) {
+    private String location;
+    public Employee(String employeeName, int employeeId) {
         this.employeeName = employeeName;
         this.id = id;
     }

@@ -23,4 +23,7 @@ public class EmployeeService {
         return "added employee";
     }
 
+    public String deleteEmployee(){
+        return "Employee deleted";
+    }
 }

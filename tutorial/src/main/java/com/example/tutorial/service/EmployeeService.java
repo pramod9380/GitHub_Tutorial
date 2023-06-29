@@ -8,9 +8,26 @@ import java.util.Map;
 
 public class EmployeeService {
 
-    static List<Employee> list = new ArrayList<>();
+    static List<Employee> employeeList = new ArrayList<>();
     static {
-        list.add(new Employee("qqqqwe", 12));
+        employeeList.add(new Employee("qqqqae", 11231));
+        employeeList.add(new Employee("askahsdg", 1221));
     }
 
+    public List<Employee> getEmployeeList(){
+        return employeeList;
+    }
+
+    public String addEmployee(Employee employee){
+        employeeList.add(employee);
+        return "added employee";
+    }
+
+    public List<Employee> getEmployees(){
+        return list;
+    }
+
+    public String deleteEmployee(){
+        return "Employee deleted";
+    }
 }

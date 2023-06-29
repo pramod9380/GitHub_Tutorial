@@ -3,10 +3,12 @@ package com.example.tutorial.model;
 public class Employee {
 
     private String employeeName;
-    private int employeeId;
+    private int id;
 
-    public Employee(String employeeName, int employeeId) {
+    private String employeeAddress;
+    
+    public Employee(String employeeName, int id) {
         this.employeeName = employeeName;
-        this.employeeId = employeeId;
+        this.id = id;
     }
 }

@@ -1,0 +1,2016 @@
+!SESSION 2022-10-17 20:36:25.810 -----------------------------------------------
+eclipse.buildId=4.15.1.202206171354
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2022-10-17 20:36:51.961
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-10-17 20:36:51.961
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@62f305bc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@729c8def,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-10-17 20:36:51.961
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@41c88e00,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4fea095b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2022-10-17 20:41:44.478
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/releases/latest/compositeContent.jar.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:459)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:265)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.getLocalFile(CompositeMetadataRepositoryFactory.java:77)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:100)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:126)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:110)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$1.runModal(PreloadingRepositoryHandler.java:84)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.hc.client5.http.ConnectTimeoutException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-17 20:41:44.479
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/latest/compositeContent.jar.
+!STACK 0
+org.apache.hc.client5.http.ConnectTimeoutException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2022-10-17 20:47:29.251
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/releases/2022-09/content.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:249)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:69)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.ProvisioningUI.loadMetadataRepository(ProvisioningUI.java:498)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getMetadataRepository(MetadataRepositoryElement.java:138)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.fetchChildren(MetadataRepositoryElement.java:84)
+	at org.eclipse.equinox.internal.p2.ui.model.RemoteQueriedElement.fetchDeferredChildren(RemoteQueriedElement.java:38)
+	at org.eclipse.ui.progress.DeferredTreeContentManager$1.run(DeferredTreeContentManager.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.hc.client5.http.ConnectTimeoutException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-17 20:47:29.251
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/2022-09/content.xml.
+!STACK 0
+org.apache.hc.client5.http.ConnectTimeoutException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2022-10-17 20:47:29.252
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/latest.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/releases/latest.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:190)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.ProvisioningUI.loadMetadataRepository(ProvisioningUI.java:498)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getMetadataRepository(MetadataRepositoryElement.java:138)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.fetchChildren(MetadataRepositoryElement.java:84)
+	at org.eclipse.equinox.internal.p2.ui.model.RemoteQueriedElement.fetchDeferredChildren(RemoteQueriedElement.java:38)
+	at org.eclipse.ui.progress.DeferredTreeContentManager$1.run(DeferredTreeContentManager.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/releases/2022-09/content.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:249)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:69)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	... 13 more
+Caused by: org.apache.hc.client5.http.ConnectTimeoutException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1002 2022-10-17 20:47:29.252
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/latest.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/releases/2022-09/content.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:249)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:69)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.ProvisioningUI.loadMetadataRepository(ProvisioningUI.java:498)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getMetadataRepository(MetadataRepositoryElement.java:138)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.fetchChildren(MetadataRepositoryElement.java:84)
+	at org.eclipse.equinox.internal.p2.ui.model.RemoteQueriedElement.fetchDeferredChildren(RemoteQueriedElement.java:38)
+	at org.eclipse.ui.progress.DeferredTreeContentManager$1.run(DeferredTreeContentManager.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.hc.client5.http.ConnectTimeoutException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	... 1 more
+!SUBENTRY 2 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-17 20:47:29.252
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/2022-09/content.xml.
+!STACK 0
+org.apache.hc.client5.http.ConnectTimeoutException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory$1.run(SSLConnectionSocketFactory.java:219)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:216)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:251)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 2 2 2022-10-17 20:49:46.737
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 0 2022-10-17 20:49:46.785
+!MESSAGE Unexpected error loading extension: org.eclipse.equinox.p2.metadata.repository.simpleRepository
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.osgi.framework.BundleContext.createFilter(String)" because "context" is null
+	at org.osgi.util.tracker.ServiceTracker.<init>(ServiceTracker.java:187)
+	at org.osgi.util.tracker.ServiceTracker.<init>(ServiceTracker.java:250)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient5.Activator.getHttpClientFactory(Activator.java:242)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient5.Activator.getBrowseHttpClient(Activator.java:267)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientBrowseFileTransferFactory$1.sendBrowseRequest(HttpClientBrowseFileTransferFactory.java:59)
+	at org.eclipse.ecf.provider.filetransfer.browse.MultiProtocolFileSystemBrowserAdapter.sendBrowseRequest(MultiProtocolFileSystemBrowserAdapter.java:97)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.sendBrowseRequest(FileInfoReader.java:184)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:109)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:125)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:130)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:244)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.getLastModified(CacheManager.java:283)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:231)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:69)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:89)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.ProvisioningUI.loadMetadataRepository(ProvisioningUI.java:498)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getMetadataRepository(MetadataRepositoryElement.java:138)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getRepository(MetadataRepositoryElement.java:127)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getQueryable(MetadataRepositoryElement.java:120)
+	at org.eclipse.equinox.internal.p2.ui.QueryProvider.getQueryDescriptor(QueryProvider.java:93)
+	at org.eclipse.equinox.internal.p2.ui.model.QueriedElement.fetchChildren(QueriedElement.java:104)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.fetchChildren(MetadataRepositoryElement.java:86)
+	at org.eclipse.equinox.internal.p2.ui.model.RemoteQueriedElement.fetchDeferredChildren(RemoteQueriedElement.java:38)
+	at org.eclipse.ui.progress.DeferredTreeContentManager$1.run(DeferredTreeContentManager.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 0 2022-10-17 20:49:46.787
+!MESSAGE Unexpected error loading extension: org.eclipse.equinox.p2.metadata.repository.compositeRepository
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.osgi.framework.BundleContext.createFilter(String)" because "context" is null
+	at org.osgi.util.tracker.ServiceTracker.<init>(ServiceTracker.java:187)
+	at org.osgi.util.tracker.ServiceTracker.<init>(ServiceTracker.java:250)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient5.Activator.getHttpClientFactory(Activator.java:242)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient5.Activator.getBrowseHttpClient(Activator.java:267)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientBrowseFileTransferFactory$1.sendBrowseRequest(HttpClientBrowseFileTransferFactory.java:59)
+	at org.eclipse.ecf.provider.filetransfer.browse.MultiProtocolFileSystemBrowserAdapter.sendBrowseRequest(MultiProtocolFileSystemBrowserAdapter.java:97)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.sendBrowseRequest(FileInfoReader.java:184)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:109)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:125)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:130)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:244)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.getLastModified(CacheManager.java:283)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:231)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.getLocalFile(CompositeMetadataRepositoryFactory.java:77)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:100)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.ProvisioningUI.loadMetadataRepository(ProvisioningUI.java:498)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getMetadataRepository(MetadataRepositoryElement.java:138)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getRepository(MetadataRepositoryElement.java:127)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getQueryable(MetadataRepositoryElement.java:120)
+	at org.eclipse.equinox.internal.p2.ui.QueryProvider.getQueryDescriptor(QueryProvider.java:93)
+	at org.eclipse.equinox.internal.p2.ui.model.QueriedElement.fetchChildren(QueriedElement.java:104)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.fetchChildren(MetadataRepositoryElement.java:86)
+	at org.eclipse.equinox.internal.p2.ui.model.RemoteQueriedElement.fetchDeferredChildren(RemoteQueriedElement.java:38)
+	at org.eclipse.ui.progress.DeferredTreeContentManager$1.run(DeferredTreeContentManager.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.ui 4 0 2022-10-17 20:49:46.788
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/latest/site.xml.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Error while reading from repository: https://download.eclipse.org/releases/latest/site.xml.
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadActualSiteFile(UpdateSite.java:255)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:155)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:108)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:62)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.ProvisioningUI.loadMetadataRepository(ProvisioningUI.java:498)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getMetadataRepository(MetadataRepositoryElement.java:138)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getRepository(MetadataRepositoryElement.java:127)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getQueryable(MetadataRepositoryElement.java:120)
+	at org.eclipse.equinox.internal.p2.ui.QueryProvider.getQueryDescriptor(QueryProvider.java:93)
+	at org.eclipse.equinox.internal.p2.ui.model.QueriedElement.fetchChildren(QueriedElement.java:104)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.fetchChildren(MetadataRepositoryElement.java:86)
+	at org.eclipse.equinox.internal.p2.ui.model.RemoteQueriedElement.fetchDeferredChildren(RemoteQueriedElement.java:38)
+	at org.eclipse.ui.progress.DeferredTreeContentManager$1.run(DeferredTreeContentManager.java:219)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-17 20:49:46.788
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/latest/site.xml.
+!SESSION 2022-10-17 21:39:20.926 -----------------------------------------------
+eclipse.buildId=4.15.1.202206171354
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2022-10-17 21:39:25.478
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-10-17 21:39:25.478
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@15a8bbe5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3369e2ce,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-10-17 21:39:25.478
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5f26cb8b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3a2a56f6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.epp.mpc.core 4 0 2022-10-17 21:41:48.609
+!MESSAGE Failed to stream using org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport@6c1950dd - falling back to org.eclipse.epp.internal.mpc.core.util.TransportFactory$$Lambda$911/0x0000000100a83ba0@1298ebac: Connection failed
+
+This is most often caused by a problem with your internet connection. Please check your internet connection and retry.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Connection failed
+
+This is most often caused by a problem with your internet connection. Please check your internet connection and retry.
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:112)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:74)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:164)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:130)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:117)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultCatalogService.listCatalogs(DefaultCatalogService.java:53)
+	at org.eclipse.epp.internal.mpc.ui.commands.AbstractMarketplaceWizardCommand.lambda$0(AbstractMarketplaceWizardCommand.java:169)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.apache.hc.client5.http.ConnectTimeoutException: Connect to http://marketplace.eclipse.org:80 [marketplace.eclipse.org/198.41.30.195] failed: Connection timed out
+	at org.apache.hc.client5.http.ConnectExceptionSupport.createConnectTimeoutException(ConnectExceptionSupport.java:52)
+	at org.apache.hc.client5.http.ConnectExceptionSupport.enhance(ConnectExceptionSupport.java:74)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientService.execute(HttpClientService.java:87)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientService.execute(HttpClientService.java:79)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:45)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:97)
+	... 7 more
+Caused by: java.net.ConnectException: Connection timed out
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	... 30 more
+Contains: Connection failed
+
+This is most often caused by a problem with your internet connection. Please check your internet connection and retry.
+org.apache.hc.client5.http.ConnectTimeoutException: Connect to http://marketplace.eclipse.org:80 [marketplace.eclipse.org/198.41.30.195] failed: Connection timed out
+	at org.apache.hc.client5.http.ConnectExceptionSupport.createConnectTimeoutException(ConnectExceptionSupport.java:52)
+	at org.apache.hc.client5.http.ConnectExceptionSupport.enhance(ConnectExceptionSupport.java:74)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientService.execute(HttpClientService.java:87)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientService.execute(HttpClientService.java:79)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:45)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:97)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:74)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:164)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:130)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:117)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultCatalogService.listCatalogs(DefaultCatalogService.java:53)
+	at org.eclipse.epp.internal.mpc.ui.commands.AbstractMarketplaceWizardCommand.lambda$0(AbstractMarketplaceWizardCommand.java:169)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.net.ConnectException: Connection timed out
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	... 30 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2022-10-17 21:41:48.611
+!MESSAGE Connection failed
+
+This is most often caused by a problem with your internet connection. Please check your internet connection and retry.
+!STACK 0
+org.apache.hc.client5.http.ConnectTimeoutException: Connect to http://marketplace.eclipse.org:80 [marketplace.eclipse.org/198.41.30.195] failed: Connection timed out
+	at org.apache.hc.client5.http.ConnectExceptionSupport.createConnectTimeoutException(ConnectExceptionSupport.java:52)
+	at org.apache.hc.client5.http.ConnectExceptionSupport.enhance(ConnectExceptionSupport.java:74)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientService.execute(HttpClientService.java:87)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientService.execute(HttpClientService.java:79)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:45)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:97)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:74)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:164)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:130)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:117)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultCatalogService.listCatalogs(DefaultCatalogService.java:53)
+	at org.eclipse.epp.internal.mpc.ui.commands.AbstractMarketplaceWizardCommand.lambda$0(AbstractMarketplaceWizardCommand.java:169)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.net.ConnectException: Connection timed out
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	... 30 more
+!SUBENTRY 2 org.eclipse.epp.mpc.core 4 0 2022-10-17 21:41:48.612
+!MESSAGE Connection failed
+
+This is most often caused by a problem with your internet connection. Please check your internet connection and retry.
+!STACK 0
+org.apache.hc.client5.http.ConnectTimeoutException: Connect to http://marketplace.eclipse.org:80 [marketplace.eclipse.org/198.41.30.195] failed: Connection timed out
+	at org.apache.hc.client5.http.ConnectExceptionSupport.createConnectTimeoutException(ConnectExceptionSupport.java:52)
+	at org.apache.hc.client5.http.ConnectExceptionSupport.enhance(ConnectExceptionSupport.java:74)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientService.execute(HttpClientService.java:87)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientService.execute(HttpClientService.java:79)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:45)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:97)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:74)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:164)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:130)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:117)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultCatalogService.listCatalogs(DefaultCatalogService.java:53)
+	at org.eclipse.epp.internal.mpc.ui.commands.AbstractMarketplaceWizardCommand.lambda$0(AbstractMarketplaceWizardCommand.java:169)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.net.ConnectException: Connection timed out
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	... 30 more
+!SUBENTRY 1 org.eclipse.epp.mpc.core 4 0 2022-10-17 21:41:48.612
+!MESSAGE Connection failed
+
+This is most often caused by a problem with your internet connection. Please check your internet connection and retry.
+!STACK 0
+org.apache.hc.client5.http.ConnectTimeoutException: Connect to http://marketplace.eclipse.org:80 [marketplace.eclipse.org/198.41.30.195] failed: Connection timed out
+	at org.apache.hc.client5.http.ConnectExceptionSupport.createConnectTimeoutException(ConnectExceptionSupport.java:52)
+	at org.apache.hc.client5.http.ConnectExceptionSupport.enhance(ConnectExceptionSupport.java:74)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientService.execute(HttpClientService.java:87)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientService.execute(HttpClientService.java:79)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.RequestTemplate.execute(RequestTemplate.java:45)
+	at org.eclipse.epp.internal.mpc.core.transport.httpclient.HttpClientTransport.stream(HttpClientTransport.java:97)
+	at org.eclipse.epp.internal.mpc.core.util.FallbackTransportFactory$FallbackTransport.stream(FallbackTransportFactory.java:74)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:164)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:130)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:117)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultCatalogService.listCatalogs(DefaultCatalogService.java:53)
+	at org.eclipse.epp.internal.mpc.ui.commands.AbstractMarketplaceWizardCommand.lambda$0(AbstractMarketplaceWizardCommand.java:169)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: java.net.ConnectException: Connection timed out
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory$1.run(PlainConnectionSocketFactory.java:87)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	... 30 more
+
+!ENTRY org.eclipse.epp.mpc.core 1 0 2022-10-17 21:41:48.624
+!MESSAGE Cannot complete request to http://marketplace.eclipse.org/catalogs/api/p: Pipe closed
+!STACK 0
+java.io.IOException: Pipe closed
+	at java.base/java.io.PipedInputStream.read(PipedInputStream.java:307)
+	at java.base/java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader$1.read(FileReader.java:334)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+	at java.base/java.nio.channels.Channels$ReadableByteChannelImpl.read(Channels.java:387)
+	at org.eclipse.epp.internal.mpc.core.service.MarketplaceUnmarshaller.peekResponseContent(MarketplaceUnmarshaller.java:98)
+	at org.eclipse.epp.internal.mpc.core.service.MarketplaceUnmarshaller.unmarshal(MarketplaceUnmarshaller.java:62)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:169)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:130)
+	at org.eclipse.epp.internal.mpc.core.service.RemoteMarketplaceService.processRequest(RemoteMarketplaceService.java:117)
+	at org.eclipse.epp.internal.mpc.core.service.DefaultCatalogService.listCatalogs(DefaultCatalogService.java:53)
+	at org.eclipse.epp.internal.mpc.ui.commands.AbstractMarketplaceWizardCommand.lambda$0(AbstractMarketplaceWizardCommand.java:169)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2022-10-17 21:42:09.980
+!MESSAGE Unexpected interrupt while waiting on ECF browse request
+!STACK 0
+java.lang.InterruptedException
+	at org.eclipse.core.internal.jobs.Semaphore.acquire(Semaphore.java:35)
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:931)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:344)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:531)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.waitOnSelf(FileInfoReader.java:74)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFiles(FileInfoReader.java:110)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getRemoteFile(FileInfoReader.java:125)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileInfoReader.getLastModified(FileInfoReader.java:130)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.getLastModified(RepositoryTransport.java:244)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.getLastModified(CacheManager.java:283)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:194)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.getLocalFile(SimpleArtifactRepositoryFactory.java:68)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:92)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:80)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:131)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:125)
+	at org.eclipse.epp.internal.mpc.ui.catalog.MarketplaceCatalog.lambda$12(MarketplaceCatalog.java:338)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.epp.mpc.ui 2 0 2022-10-17 21:44:00.350
+!MESSAGE Failed to download resource for catalog 'Red Hat' (2704390) from https://marketplace.eclipse.org/sites/default/files/32x32.png
+!STACK 0
+java.io.IOException: Pipe closed
+	at java.base/java.io.PipedInputStream.read(PipedInputStream.java:307)
+	at java.base/java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader$1.read(FileReader.java:334)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:263)
+	at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.lambda$0(ResourceProvider.java:95)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.retrieve(ResourceProvider.java:149)
+	at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1.run(ResourceProvider.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jface 2 0 2022-10-17 21:44:00.351
+!MESSAGE The image could not be loaded: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProviderImageDescriptor@39f207b6
+!STACK 0
+org.eclipse.jface.resource.DeviceResourceException: Unable to create resource org.eclipse.epp.internal.mpc.ui.catalog.ResourceProviderImageDescriptor@39f207b6
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:232)
+	at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProviderImageDescriptor.createResource(ResourceProviderImageDescriptor.java:83)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:55)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.LazyResourceManager.create(LazyResourceManager.java:97)
+	at org.eclipse.jface.resource.ResourceManager.createImageWithDefault(ResourceManager.java:195)
+	at org.eclipse.jface.resource.ImageRegistry.get(ImageRegistry.java:206)
+	at org.eclipse.epp.internal.mpc.ui.wizards.CatalogSwitcherItem.getCatalogIcon(CatalogSwitcherItem.java:124)
+	at org.eclipse.epp.internal.mpc.ui.wizards.CatalogSwitcherItem$1.run(CatalogSwitcherItem.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.epp.mpc.ui 2 0 2022-10-17 21:44:00.374
+!MESSAGE Failed to download resource for catalog 'Obeo Marketplace' (2671769) from https://marketplace.eclipse.org/sites/default/files/icon_obeo_transparent64.png
+!STACK 0
+java.io.IOException: Pipe closed
+	at java.base/java.io.PipedInputStream.read(PipedInputStream.java:307)
+	at java.base/java.io.PipedInputStream.read(PipedInputStream.java:377)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader$1.read(FileReader.java:334)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:263)
+	at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.lambda$0(ResourceProvider.java:95)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$ResourceFuture.retrieve(ResourceProvider.java:149)
+	at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProvider$1.run(ResourceProvider.java:309)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jface 2 0 2022-10-17 21:44:00.374
+!MESSAGE The image could not be loaded: org.eclipse.epp.internal.mpc.ui.catalog.ResourceProviderImageDescriptor@3bdfc938
+!STACK 0
+org.eclipse.jface.resource.DeviceResourceException: Unable to create resource org.eclipse.epp.internal.mpc.ui.catalog.ResourceProviderImageDescriptor@3bdfc938
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:232)
+	at org.eclipse.epp.internal.mpc.ui.catalog.ResourceProviderImageDescriptor.createResource(ResourceProviderImageDescriptor.java:83)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:55)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.LazyResourceManager.create(LazyResourceManager.java:97)
+	at org.eclipse.jface.resource.ResourceManager.createImageWithDefault(ResourceManager.java:195)
+	at org.eclipse.jface.resource.ImageRegistry.get(ImageRegistry.java:206)
+	at org.eclipse.epp.internal.mpc.ui.wizards.CatalogSwitcherItem.getCatalogIcon(CatalogSwitcherItem.java:124)
+	at org.eclipse.epp.internal.mpc.ui.wizards.CatalogSwitcherItem$1.run(CatalogSwitcherItem.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2022-10-17 21:46:25.383
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at https://download.eclipse.org/releases/latest.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:405)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:709)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:126)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:110)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$1.runModal(PreloadingRepositoryHandler.java:84)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:188)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2022-10-17 21:46:25.383
+!MESSAGE No repository found at https://download.eclipse.org/releases/latest.
+!SESSION 2022-10-18 09:43:17.481 -----------------------------------------------
+eclipse.buildId=4.15.1.202206171354
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2022-10-18 09:43:23.858
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-10-18 09:43:23.858
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@77925f76,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@15a8bbe5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-10-18 09:43:23.858
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3369e2ce,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5f26cb8b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-10-18 09:47:00.690
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-10-18 09:47:00.695
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2022-10-18 09:50:35.856
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/technology/epp/packages/2022-06/compositeContent.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:459)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:265)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.getLocalFile(CompositeMetadataRepositoryFactory.java:77)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:100)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.epp.internal.mpc.ui.operations.AbstractProvisioningOperation.addRepositories(AbstractProvisioningOperation.java:94)
+	at org.eclipse.epp.internal.mpc.ui.operations.ResolveFeatureNamesOperation.run(ResolveFeatureNamesOperation.java:49)
+	at org.eclipse.epp.internal.mpc.ui.wizards.FeatureSelectionWizardPage$2.run(FeatureSelectionWizardPage.java:398)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.apache.hc.client5.http.ConnectTimeoutException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1505)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1420)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:273)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:241)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:50:35.857
+!MESSAGE Unable to read repository at https://download.eclipse.org/technology/epp/packages/2022-06/compositeContent.xml.
+!STACK 0
+org.apache.hc.client5.http.ConnectTimeoutException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1505)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1420)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:273)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:241)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2022-10-18 09:50:35.862
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/2022-06.
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://download.eclipse.org/technology/epp/packages/2022-06/compositeContent.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.updateCache(CacheManager.java:459)
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:265)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.getLocalFile(CompositeMetadataRepositoryFactory.java:77)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:100)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.epp.internal.mpc.ui.operations.AbstractProvisioningOperation.addRepositories(AbstractProvisioningOperation.java:94)
+	at org.eclipse.epp.internal.mpc.ui.operations.ResolveFeatureNamesOperation.run(ResolveFeatureNamesOperation.java:49)
+	at org.eclipse.epp.internal.mpc.ui.wizards.FeatureSelectionWizardPage$2.run(FeatureSelectionWizardPage.java:398)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: org.apache.hc.client5.http.ConnectTimeoutException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1505)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1420)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:273)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:241)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:50:35.863
+!MESSAGE Unable to read repository at https://download.eclipse.org/technology/epp/packages/2022-06/compositeContent.xml.
+!STACK 0
+org.apache.hc.client5.http.ConnectTimeoutException: Connect to https://download.eclipse.org:443 [download.eclipse.org/198.41.30.199] failed: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:283)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1505)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1420)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:273)
+	at org.apache.hc.client5.http.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:241)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:148)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:396)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:158)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:168)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:136)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 2 2 2022-10-18 09:53:13.490
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2022-10-18 09:53:13.646
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2022-10-18 09:53:13.646
+!MESSAGE session context was:(profile=DefaultProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-10-18 09:53:13.646
+!MESSAGE Failed to transfer artifact canonical: osgi.bundle,com.google.javascript,0.0.20160315.v20161124-1903.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.646
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.646
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!STACK 0
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:248)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:327)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:461)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1508)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1479)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1064)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.hc.core5.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:173)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:106)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:180)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.646
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.646
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.646
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.646
+!MESSAGE Error while reading from repository: https://mirrors.dotsrc.org/eclipse//releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.646
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.646
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.646
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.646
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.646
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.646
+!MESSAGE Error while reading from repository: https://ftp.linux.org.tr/eclipse//releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.646
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.646
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.646
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.646
+!MESSAGE Error while reading from repository: https://ftp.halifax.rwth-aachen.de/eclipse/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.646
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.646
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.646
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.646
+!MESSAGE Error while reading from repository: https://rhlx01.hs-esslingen.de/pub/Mirrors/eclipse/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.646
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.646
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.646
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.646
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://mirror.ibcp.fr/pub/eclipse/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://ftp.snt.utwente.nl/pub/software/eclipse/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://eclipse.mirror.liteserver.nl/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://mirror.aarnet.edu.au/pub/eclipse/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://mirror.serverion.com/eclipse/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://ftp.snt.utwente.nl/pub/software/eclipse/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://ftp.linux.org.tr/eclipse//releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://ftp.acc.umu.se/mirror/eclipse.org/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://mirror.dkm.cz/eclipse/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.javascript_0.0.20160315.v20161124-1903.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-10-18 09:53:13.647
+!MESSAGE Failed to transfer artifact canonical: osgi.bundle,com.google.protobuf,2.4.0.v201105131100.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.protobuf_2.4.0.v201105131100.jar.
+!STACK 0
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:248)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:327)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:461)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1508)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1479)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1064)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.hc.core5.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:173)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:106)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:180)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://mirror.aarnet.edu.au/pub/eclipse/releases/2022-06/202206151000/plugins/com.google.protobuf_2.4.0.v201105131100.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.protobuf_2.4.0.v201105131100.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://mirror.serverion.com/eclipse/releases/2022-06/202206151000/plugins/com.google.protobuf_2.4.0.v201105131100.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://ftp.halifax.rwth-aachen.de/eclipse/releases/2022-06/202206151000/plugins/com.google.protobuf_2.4.0.v201105131100.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://mirror.dogado.de/eclipse/releases/2022-06/202206151000/plugins/com.google.protobuf_2.4.0.v201105131100.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.647
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://ftp.acc.umu.se/mirror/eclipse.org/releases/2022-06/202206151000/plugins/com.google.protobuf_2.4.0.v201105131100.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.647
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/com.google.protobuf_2.4.0.v201105131100.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-10-18 09:53:13.648
+!MESSAGE Failed to transfer artifact canonical: osgi.bundle,java_cup-runtime,0.11.20150326.v20180425-1030.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Unable to read repository at https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!STACK 0
+java.lang.IllegalStateException: Connection pool shut down
+	at org.apache.hc.core5.util.Asserts.check(Asserts.java:38)
+	at org.apache.hc.core5.pool.StrictConnPool.lease(StrictConnPool.java:176)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.lease(PoolingHttpClientConnectionManager.java:257)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.acquireEndpoint(InternalExecRuntime.java:103)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:119)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:175)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:133)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement$1.proceed(ExecChainElement.java:57)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:75)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1009)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1001)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:997)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://ftp.jaist.ac.jp/pub/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://mirrors.neusoft.edu.cn/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://ftp.yz.yamagata-u.ac.jp/pub/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://mirror.csclub.uwaterloo.ca/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://ftp.yz.yamagata-u.ac.jp/pub/eclipse//releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://mirror.library.ucy.ac.cy/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://mirror.umd.edu/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://mirror.clarkson.edu/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://mirrors.xmission.com/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://mirrors.jevincanders.net/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://eclipse.mirror.rafal.ca/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://eclipse.mirror.garr.it/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.648
+!MESSAGE Error while reading from repository: https://mirror.tspu.ru/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.648
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://mirror.dkm.cz/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://ftp.fau.de/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://mirror.dogado.de/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://ftp.acc.umu.se/mirror/eclipse.org/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://mirror.aarnet.edu.au/pub/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://eclipse.c3sl.ufpr.br/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://mirror.ibcp.fr/pub/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://rhlx01.hs-esslingen.de/pub/Mirrors/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://eclipse.mirror.liteserver.nl/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://ftp.fau.de/eclipse/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/java_cup-runtime_0.11.20150326.v20180425-1030.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2022-10-18 09:53:13.649
+!MESSAGE Failed to transfer artifact canonical: osgi.bundle,javax.xml,1.3.4.v201005080400.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Unable to read repository at https://download.eclipse.org/releases/2022-06/202206151000/plugins/javax.xml_1.3.4.v201005080400.jar.
+!STACK 0
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:248)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:327)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:350)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:803)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:461)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1508)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1479)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1064)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.hc.core5.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:173)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:135)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:106)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:180)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/javax.xml_1.3.4.v201005080400.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/javax.xml_1.3.4.v201005080400.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://mirror.aarnet.edu.au/pub/eclipse/releases/2022-06/202206151000/plugins/javax.xml_1.3.4.v201005080400.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://mirror.serverion.com/eclipse/releases/2022-06/202206151000/plugins/javax.xml_1.3.4.v201005080400.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.artifact.repository 4 13 2022-10-18 09:53:13.649
+!MESSAGE Retry another mirror
+!SUBENTRY 3 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.649
+!MESSAGE Error while reading from repository: https://mirrors.dotsrc.org/eclipse//releases/2022-06/202206151000/plugins/javax.xml_1.3.4.v201005080400.jar.
+!SUBENTRY 2 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://mirror.tspu.ru/eclipse/releases/2022-06/202206151000/plugins/javax.xml_1.3.4.v201005080400.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://eclipse.mirror.garr.it/releases/2022-06/202206151000/plugins/org.apache.bcel_5.2.0.v201005080400.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://ftp.osuosl.org/pub/eclipse/releases/2022-06/202206151000/plugins/org.apache.xalan_2.7.2.v20201124-1837.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.apache.xml.serializer_2.7.1.v201005080400.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.draw2d_3.10.100.201606061308.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.emf.common.ui_2.20.0.v20220226-1304.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.emf.edit.ui_2.21.0.v20220226-1304.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.gef_3.11.0.201606061308.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.json_1.1.100.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.common.infopop_1.0.301.v202007142017.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.common.snippets_1.2.500.v201811170421.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.common_core.feature_3.23.0.v202108200212.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.common_ui.feature_3.23.0.v202107101917.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.css.core_1.3.1.v202201311924.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.css.ui_1.2.0.v202101180039.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.doc.user_1.2.0.v201903222120.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.dtd.core_1.2.200.v202102251419.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.dtd.ui_1.1.300.v202008091424.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.dtd.ui.infopop_1.0.400.v201903222120.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.dtdeditor.doc.user_1.1.0.v201903222120.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.html.core_1.4.100.v202112071542.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.html.ui_1.1.600.v202105181958.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.html.ui.infopop_1.0.201.v201903222120.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.internet.cache_1.1.0.v202011161431.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.jsdt.core_2.0.303.v202007221940.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.jsdt.manipulation_1.0.601.v201903222047.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.jsdt.ui_2.1.400.v202204072230.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.jsdt.web.core_1.1.100.v202005120035.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.jsdt.web.ui_1.2.300.v202107272335.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.json.bower.core_1.0.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://mirrors.jevincanders.net/eclipse/releases/2022-06/202206151000/plugins/org.eclipse.wst.json.bower.ui_1.0.200.v201904210526.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.json.core_1.1.0.v201901152013.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.json.eslint.core_1.0.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.json.eslint.ui_1.0.200.v201904210526.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.json.jshint.core_1.0.1.v201908281850.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.json.jshint.ui_1.0.200.v201904210526.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.json.npm.core_1.0.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.json.npm.ui_1.0.100.v201904210526.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.json.schemaprocessor_1.0.200.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.json.ui_1.0.600.v202103121626.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.json_core.feature_1.1.8.v201909302219.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.json_ui.feature_1.1.10.v202103121626.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.sse.doc.user_1.2.0.v201903222120.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.sse.ui.infopop_1.0.300.v201903222120.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.standard.schemas_1.0.800.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.validation.infopop_1.0.300.v202007131715.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.web.ui_1.2.200.v202107272335.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://eclipse.mirror.rafal.ca/releases/2022-06/202206151000/plugins/org.eclipse.wst.web.ui.infopop_1.0.300.v201903222120.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.web_core.feature_3.26.0.v202204042240.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.web_js_support.feature_3.22.0.v202107272335.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.web_ui.feature_3.26.0.v202204091445.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.web_userdoc.feature_3.18.0.v202004271556.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.webtools.doc.user_1.0.500.v201903222120.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xml.ui.infopop_1.0.400.v201903222120.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xml.xpath.core_1.3.1.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.650
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xml.xpath.ui_1.1.300.v201904282210.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xml.xpath2_1.1.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xml.xpath2.processor_2.1.200.v202204040421.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xml.xpath2.processor.doc.user_2.1.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.xml.xpath2.processor.feature_2.0.400.v202204112029.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xml.xpath2.wtptypes_2.0.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.xml_core.feature_3.26.0.v202204042240.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.xml_ui.feature_3.26.0.v202204091445.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.xml_userdoc.feature_3.18.0.v202004271556.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xmleditor.doc.user_1.1.0.v201903222120.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsd.ui_1.3.400.v202008091424.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsdeditor.doc.user_1.0.800.v201903222120.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl_1.2.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl.core_1.2.100.v201907231732.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl.debug.ui_1.1.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl.doc_1.1.0.v202110312208.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl.exslt.core_1.1.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl.exslt.ui_1.1.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/features/org.eclipse.wst.xsl.feature_1.3.1100.v202204040421.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl.jaxp.debug_1.1.100.v202202230212.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl.jaxp.debug.ui_1.1.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl.jaxp.launching_1.1.200.v202202230212.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl.launching_1.2.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl.saxon_1.1.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl.ui_1.2.100.v202004230532.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.wst.xsl.xalan_1.1.0.v201901071922.jar.
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2022-10-18 09:53:13.651
+!MESSAGE Error while reading from repository: https://download.eclipse.org/releases/2022-06/202206151000/plugins/org.eclipse.xsd.edit_2.11.0.v20200723-0820.jar.
+!SESSION 2022-10-18 09:53:16.919 -----------------------------------------------
+eclipse.buildId=4.15.1.202206171354
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2022-10-18 09:53:22.929
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-10-18 09:53:22.929
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@42012093,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3c538e62,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-10-18 09:53:22.930
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@ca0a21f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@768d27e8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2022-10-18 09:55:07.271
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2022-10-18 09:55:43.947 -----------------------------------------------
+eclipse.buildId=4.15.1.202206171354
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2022-10-18 09:55:51.712
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-10-18 09:55:51.712
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ea19c97,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@525b9df4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-10-18 09:55:51.712
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@52dd1be2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@36857d32,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 0 2022-10-18 09:56:18.297
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument not valid
+	at org.eclipse.swt.SWT.error(SWT.java:4899)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.graphics.Image.init(Image.java:1219)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:209)
+	at org.eclipse.equinox.internal.p2.ui.discovery.util.GradientCanvas.onPaint(GradientCanvas.java:168)
+	at org.eclipse.equinox.internal.p2.ui.discovery.util.GradientCanvas.lambda$0(GradientCanvas.java:81)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5794)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1529)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1555)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1538)
+	at org.eclipse.swt.widgets.Control.gtk_draw(Control.java:3882)
+	at org.eclipse.swt.widgets.Scrollable.gtk_draw(Scrollable.java:365)
+	at org.eclipse.swt.widgets.Composite.gtk_draw(Composite.java:496)
+	at org.eclipse.swt.widgets.Canvas.gtk_draw(Canvas.java:174)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:2409)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:6832)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:6114)
+	at org.eclipse.swt.internal.gtk3.GTK3.gtk_main_do_event(Native Method)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1552)
+	at org.eclipse.swt.internal.gtk3.GTK3.gtk_main_iteration_do(Native Method)
+	at org.eclipse.swt.browser.WebKit$Webkit2AsyncToSync.execAsyncAndWaitForReturn(WebKit.java:1273)
+	at org.eclipse.swt.browser.WebKit$Webkit2AsyncToSync.runjavascript(WebKit.java:1021)
+	at org.eclipse.swt.browser.WebKit$Webkit2AsyncToSync.evaluate(WebKit.java:991)
+	at org.eclipse.swt.browser.WebKit.evaluate(WebKit.java:1290)
+	at org.eclipse.swt.browser.WebKit.close(WebKit.java:856)
+	at org.eclipse.swt.browser.WebKit.onDispose(WebKit.java:1783)
+	at org.eclipse.swt.browser.WebKit.lambda$4(WebKit.java:759)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5794)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1529)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1555)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1534)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:1337)
+	at org.eclipse.swt.widgets.Control.release(Control.java:4768)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:543)
+	at org.eclipse.epp.internal.mpc.ui.wizards.AbstractMarketplaceDiscoveryItem.computeBrowserAvailable(AbstractMarketplaceDiscoveryItem.java:521)
+	at org.eclipse.epp.internal.mpc.ui.wizards.AbstractMarketplaceDiscoveryItem.createInfoLink(AbstractMarketplaceDiscoveryItem.java:394)
+	at org.eclipse.epp.internal.mpc.ui.wizards.AbstractMarketplaceDiscoveryItem.createDescription(AbstractMarketplaceDiscoveryItem.java:341)
+	at org.eclipse.epp.internal.mpc.ui.wizards.AbstractMarketplaceDiscoveryItem.createContent(AbstractMarketplaceDiscoveryItem.java:241)
+	at org.eclipse.epp.internal.mpc.ui.wizards.AbstractMarketplaceDiscoveryItem.createContent(AbstractMarketplaceDiscoveryItem.java:203)
+	at org.eclipse.epp.internal.mpc.ui.wizards.DiscoveryItem.createContent(DiscoveryItem.java:123)
+	at org.eclipse.epp.internal.mpc.ui.wizards.AbstractMarketplaceDiscoveryItem.<init>(AbstractMarketplaceDiscoveryItem.java:168)
+	at org.eclipse.epp.internal.mpc.ui.wizards.DiscoveryItem.<init>(DiscoveryItem.java:102)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer.createDiscoveryItem(MarketplaceViewer.java:501)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer.doCreateViewerItem(MarketplaceViewer.java:435)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer$3.doCreateItem(CatalogViewer.java:344)
+	at org.eclipse.equinox.internal.p2.ui.discovery.util.ControlListViewer.createNewItem(ControlListViewer.java:244)
+	at org.eclipse.equinox.internal.p2.ui.discovery.util.ControlListViewer.refreshAll(ControlListViewer.java:486)
+	at org.eclipse.equinox.internal.p2.ui.discovery.util.ControlListViewer.inputChanged(ControlListViewer.java:358)
+	at org.eclipse.jface.viewers.ContentViewer.setInput(ContentViewer.java:282)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1632)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer.catalogUpdated(CatalogViewer.java:250)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer.access$3(MarketplaceViewer.java:1)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer.lambda$1(MarketplaceViewer.java:377)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer.runUpdate(MarketplaceViewer.java:772)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer.catalogUpdated(MarketplaceViewer.java:376)
+	at org.eclipse.equinox.internal.p2.ui.discovery.wizards.CatalogViewer.updateCatalog(CatalogViewer.java:589)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceViewer.updateCatalog(MarketplaceViewer.java:1049)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplacePage.safeUpdateCatalog(MarketplacePage.java:810)
+	at org.eclipse.epp.internal.mpc.ui.wizards.MarketplacePage.lambda$4(MarketplacePage.java:798)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:5000)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4480)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.epp.internal.mpc.ui.commands.AbstractMarketplaceWizardCommand.openWizardDialog(AbstractMarketplaceWizardCommand.java:146)
+	at org.eclipse.epp.internal.mpc.ui.commands.AbstractMarketplaceWizardCommand.execute(AbstractMarketplaceWizardCommand.java:73)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:283)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:97)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:317)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:251)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:173)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:156)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:213)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:438)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.handleWidgetSelection(AbstractContributionItem.java:449)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.lambda$2(AbstractContributionItem.java:475)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5794)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1529)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5025)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4477)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 2 2 2022-10-18 17:40:08.280
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2022-11-28 22:40:02.797 -----------------------------------------------
+eclipse.buildId=4.15.1.202206171354
+java.version=17.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.jface 2 0 2022-11-28 22:40:25.886
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-11-28 22:40:25.886
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3c5bb37d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@558575fe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-11-28 22:40:25.886
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@25fcdcc6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@180fb796,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2022-11-28 22:41:33.498
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
